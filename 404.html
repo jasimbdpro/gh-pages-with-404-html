@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        // Redirect to index.html
+        // First redirect
         window.location.href = "/gh-pages-with-404-html/";
 
+        // Set a timeout for the second redirect
+        setTimeout(function () {
+            window.history.pushState(null, "", "/second-redirect-page/test/");
+        }, 3); // 3000 ms = 3 seconds, adjust as needed
     </script>
 </head>
 
