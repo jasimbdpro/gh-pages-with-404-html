@@ -5,7 +5,7 @@ const Home = () => {
     const [count, setCount] = useState(0)
     return (
         <div>
-            <h1>6</h1>
+            <h1>7s</h1>
             <Link to='/test'>Test</Link>
             <div className="card">
                 <button onClick={() => setCount((count) => count + 1)}>
