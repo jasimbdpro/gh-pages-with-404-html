@@ -1,5 +1,6 @@
 {
   "name": "gh-pages-with-404-html",
+  "homepage": "gh-pages-with-404-html",
   "private": true,
   "version": "0.0.0",
   "type": "module",
