@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    // Redirect to index.html while keeping the same path
-    const currentPath = window.location.pathname;
-    if (currentPath !== '/react1/index.html/') {
-        // Redirect to index.html but keep the browser URL intact
-        window.location.href = '/react1/index.html?redirect=/' + encodeURIComponent(currentPath);
-    }
-</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+</head>
+
+<body>
+    <script>
+        // Serve index.html for any path that results in 404
+        window.location.replace("/react1/index.html");
+    </script>
+</body>
 
 </html>
