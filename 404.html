@@ -1,33 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <script>
-        // First redirect
-        window.location.href = "/gh-pages-with-404-html/";
-
-        // Set a timeout for the second redirect
-        setTimeout(function () {
-            window.history.pushState(null, "", "/second-redirect-page/test/");
-        }, 3); // 3000 ms = 3 seconds, adjust as needed
-    </script>
-</head>
-
-<body>
-</body>
-
-</html>
-
-<!-- This minimal format ↓↓ is also allowed -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
 <script>
-    // Redirect to index.html
-    window.location.href = "/index.html";
+    // Redirect to index.html while keeping the same path
+    const currentPath = window.location.pathname;
+    if (currentPath !== '/react1/index.html') {
+        // Redirect to index.html but keep the browser URL intact
+        window.location.href = '/react1/index.html?redirect=' + encodeURIComponent(currentPath);
+    }
 </script>
 
-</html> -->
+</html>
